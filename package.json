@@ -1,0 +1,32 @@
+{
+  "name": "node-test",
+  "version": "0.1",
+  "author": "Amit Segal <asegal@gmail.com>",
+  "description": "A node.js helloworld application that responds with values of http request headers ",
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/asegal/node-test.git"
+  },
+  "scripts": {
+    "start": "node ./bin/server"
+  },
+  "contributors": [
+    {
+      "name": "Amit Segal",
+      "email": "asegal@gmail.com"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.4"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/nodeapps/helloworld/raw/master/LICENSE"
+    }
+  ],
+  "analyze": false
+}
