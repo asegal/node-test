@@ -1,6 +1,6 @@
 {
   "name": "node-test",
-  "version": "0.1",
+  "version": "0.0.1",
   "author": "Amit Segal <asegal@gmail.com>",
   "description": "A node.js helloworld application that responds with values of http request headers ",
   "main": "",
