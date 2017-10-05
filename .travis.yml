@@ -1,0 +1,23 @@
+dist: trusty
+sudo: false
+
+language: node_js
+node_js:
+  - 8
+
+install:
+  - printenv || true
+  - npm update
+  - npm prune
+  - npm install --global now
+  - npm install --global @front-warden/ci-runner-cli
+
+after_success:
+  - NOW_URL=$(now deploy --public --name node-echo --token $NOW_TOKEN | egrep -o 'https?://[^ ]+')
+  - echo Deployed to $NOW_URL
+  - node run.js $NOW_URL
+  - now remove -y --token $NOW_TOKEN $NOW_URL
+
+cache:
+  directories:
+    - node_modules
