@@ -7,7 +7,11 @@ var http = require('http'),
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.write(JSON.stringify(req.headers));
+  var i = 0;
+  while (i < 100) {
+      res.write(JSON.stringify(req.headers));
+      i++;
+  }
   res.end();
 }).listen(port);
 
