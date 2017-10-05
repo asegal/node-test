@@ -15,7 +15,7 @@ install:
 after_success:
   - NOW_URL=$(now deploy --public --name node-echo --token $NOW_TOKEN | egrep -o 'https?://[^ ]+')
   - echo Deployed to $NOW_URL
-  - node run.js $NOW_URL
+  - frontwarden $NOW_URL
   - now remove -y --token $NOW_TOKEN $NOW_URL
 
 cache:
